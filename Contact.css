@@ -62,3 +62,49 @@ div#endmenu
 	border-radius: 5px 5px;
 	background-color: #6A6C71;
 }
+
+p
+{
+	color: #FCFDFD;
+	font-family: Times New Roman;
+	text-align: center;
+}
+
+
+#Zoé
+{
+	list-style-type: none;
+	margin: 0 auto;
+	display: inline;
+	border: 2px solid #000000;
+	font-family: Times New Roman;
+	color: #FCFDFD;
+	padding: 5%;
+	border-radius: 5% 5%;
+	background-color: #6A6C71;
+	float: right
+}
+
+#Pierre
+{
+	list-style-type: none;
+	margin: 0 auto;
+	display: inline;
+	border: 2px solid #000000;
+	font-family: Times New Roman;
+	color: #FCFDFD;
+	padding: 5%;
+	border-radius: 5% 5%;
+	background-color: #6A6C71;
+	float: right;
+}
+
+#Pierre1
+{
+	height: 60%;
+	width: 60%;
+}
+
+
+
+
