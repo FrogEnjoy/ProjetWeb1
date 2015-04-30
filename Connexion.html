@@ -43,7 +43,9 @@
 						<tr><td>Pseudo:</td>
 						<td><input id="name" type="text" size="30" name="name" pattern="[a-z0-9]{20}" autocomplete="off" required></td></tr>
 						<tr><td>Mot De Passe:</td>
-						<td><input id="name" type="text" size="30" name="name" pattern="[a-z0-9]{100}" autocomplete="off" required></td></tr>
+							<!--Type en password pour ne pas voir les caractères mis sur la page-->
+							<!--Tu devrais changer "name" en "mot de passe" ou "mdp". C'est utile pour une base de donnée par exemple-->
+						<td><input id="name" type="password" size="30" name="name" pattern="[a-z0-9]{100}" autocomplete="off" required></td></tr>
 						</table>
 				</fieldset>
 				<br> <input type=submit value=Connexion> <input type=submit value="Mdp Perdu ?">
@@ -53,7 +55,7 @@
 						<tr><td>Pseudo:</td>
 						<td><input id="name" type="text" size="30" name="name" pattern="[a-z0-9]{20}" autocomplete="off" required></td></tr>
 						<tr><td>Mot De Passe:</td>
-						<td><input id="name" type="text" size="30" name="name" pattern="[a-z0-9]{100}" autocomplete="off" required></td></tr>
+						<td><input id="name" type="password" size="30" name="name" pattern="[a-z0-9]{100}" autocomplete="off" required></td></tr>
 						<tr><td>Adresse Mail:<br>
 						<td><input id="name" type="text" size="30" name="name" pattern="[a-z0-9]{100}@[a-z]{2,}.[a-z]{2,5}" autocomplete="off" required></td></tr>
 						</table>
