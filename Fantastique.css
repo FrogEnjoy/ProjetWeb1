@@ -63,7 +63,10 @@ div#endmenu
 	background-color: #6A6C71;
 }
 
-#fanta_banniere
+#essai
 {
-	
+	font-family: Vivaldi;
+	text-align: center;
+	font-size: 40px;
+	color: #FCFDFD;
 }
