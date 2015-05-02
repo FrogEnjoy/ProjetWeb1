@@ -4,7 +4,7 @@ include ("PageHaut.php");
 
 <link rel="stylesheet" href="Contact.css" />
 		
-				<div>			<!-- Nous contacter -->
+			<div>			<!-- Nous contacter -->
 			<p>Bonjour, bienvenue sur notre site.</p>	<!-- Petite intro -->
 			<p>Si vous êtes sur cette page c'est que vous avez besoin de nous contacter:</p>
 			<table>
@@ -34,6 +34,3 @@ include ("PageHaut.php");
 <?php 
 include ("PageBas.php");
 ?>
-
-    </body>
-</html>
