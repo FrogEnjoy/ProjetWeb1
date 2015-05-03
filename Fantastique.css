@@ -1,72 +1,25 @@
 body
 {
-	background: url('walkpaper_black.jpg');
-	background-size:cover;
-}
-
-a
-{
-	text-decoration: none;
-	color: #FCFDFD
-}
-
-a:hover
-{
-	color: #00BCE2;
-}
-
-div#conteneur
-{
-	width:100%;
-}
-
-#titre 
-{
-	font-family: Vivaldi;
-	text-align: center;
-	font-size: 40px;
 	color: #FCFDFD;
+	font-family: Times New Roman;
 }
 
-div#navbar
+#new
 {
-	width:100%;
-	font-size:13pt;
-	float:center;
-	text-align:center;
-}
-
-div#endmenu
-{
-	width:99%;
-	font-size:13pt;
-	float:center;
-	text-align:center;
-	position:fixed;
-	bottom:10px;
-}
-
-#base
-{
-	list-style-type: none;
-	margin: 0 auto;
-}
-
-#li1
-{
-	display: inline;
-	border: 2px solid #000000;
-	font-family: Futura, Tahoma, sans-serif;
-	color: #6A6C71;
-	padding: 5px;
-	border-radius: 5px 5px;
-	background-color: #6A6C71;
-}
-
-#essai
-{
-	font-family: Vivaldi;
-	text-align: center;
-	font-size: 40px;
 	color: #FCFDFD;
+	border: 2px solid black;
+	background-color: #343434;
+	border-radius: 7px 7px;
+	padding: 3px;
+	font-family: Times New Roman;
 }
+
+#dragon
+{
+	width: 350px;
+	height: 110px;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+}
+

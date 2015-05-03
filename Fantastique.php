@@ -4,7 +4,8 @@
 
 <link rel="stylesheet" href="Fantastique.css" />
 
-
+<img id="dragon" src="dragon.gif"/> <br>
+<a id="new" href="NewText.php">Transmettre un Essai</a><br>
 
 <?php
 try
@@ -30,7 +31,7 @@ while ($donnees = $reponse->fetch())
 ?>
 
 
-<center><table cellspacing="0" cellpadding="0" border="0" width="680" >
+<center><table cellspacing="0" cellpadding="0" border="0" width="680">
 		<tr>
 		<td>
 			<table cellspacing="0" cellpadding="0" border="1" width="674">

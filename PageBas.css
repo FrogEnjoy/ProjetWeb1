@@ -34,7 +34,8 @@ div#navbar
 	font-size:13pt;
 	float:center;
 	text-align:center;
-	position:fixed;
+	top: 1px;
+	position: fixed;
 }
 
 div#endmenu
@@ -43,7 +44,8 @@ div#endmenu
 	font-size:13pt;
 	float:center;
 	text-align:center;
-	bottom:10px;
+	bottom: 1px;
+	position: fixed;
 }
 
 #base
