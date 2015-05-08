@@ -2,9 +2,9 @@
 	include ("PageHaut.php");
 ?>
 
-<link rel="stylesheet" href="Fantastique.css" />
+<link rel="stylesheet" href="Horreur.css" />
 
-<img id="dragon" src="dragon_fini.gif"/> <br>
+<img id="dragon" src="horreur1.gif"/> <br>
 <a id="new" href="NewText.php">Transmettre un Essai</a><br>
 
 <?php
@@ -22,7 +22,7 @@ catch(Exception $e)
 // Si tout va bien, on peut continuer
 
 // On récupère tout le contenu de la table jeux_video
-$reponse = $bdd->query('SELECT * FROM Fantastique INNER JOIN Utilisateur ON Utilisateur_idUtilisateur=idUtilisateur ORDER BY Date_Fanta DESC');
+$reponse = $bdd->query('SELECT * FROM Horreur INNER JOIN Utilisateur ON Utilisateur_idUtilisateur=idUtilisateur ORDER BY Date_Horreur DESC');
 
 
 // On affiche chaque entrée une à une
@@ -37,8 +37,8 @@ while ($donnees = $reponse->fetch())
 			<table cellspacing="0" cellpadding="0" border="1" width="674">
 				<tr>
 					<td align=center><?php echo $donnees['Pseudo']; ?></td>
-					<td align=center><?php echo $donnees['Nom_Fanta']; ?></td>
-					<td align=center><?php echo $donnees['Date_Fanta']; ?></td>
+					<td align=center><?php echo $donnees['Nom_Horreur']; ?></td>
+					<td align=center><?php echo $donnees['Date_Horreur']; ?></td>
 				</tr>
 			</table>
 		</td>
@@ -49,7 +49,7 @@ while ($donnees = $reponse->fetch())
 			<div style="width:700px; height:200px; overflow:auto;">
 			<table cellspacing="0" cellpadding="1" border="1" width="674">
 				<tr>
-					<td colspan=3 align=center style="overflow:auto"><?php echo $donnees['Texte_Fanta']; ?></td>
+					<td colspan=3 align=center style="overflow:auto"><?php echo $donnees['Texte_Horreur']; ?></td>
 				<tr>
 			</table>
 			</div>
