@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="Horreur.css" />
 
-<img id="dragon" src="horreur1.gif"/> <br>
+<img id="squelette" src="horreur1.gif"/> <br>
 <a id="new" href="NewText.php">Transmettre un Essai</a><br>
 
 <?php
@@ -39,6 +39,7 @@ while ($donnees = $reponse->fetch())
 					<td align=center><?php echo $donnees['Pseudo']; ?></td>
 					<td align=center><?php echo $donnees['Nom_Horreur']; ?></td>
 					<td align=center><?php echo $donnees['Date_Horreur']; ?></td>
+					<td align=center><a id="Comm" href="Commentaires.php">Commenter</a><br></td>
 				</tr>
 			</table>
 		</td>

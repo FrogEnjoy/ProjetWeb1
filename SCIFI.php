@@ -2,9 +2,9 @@
 	include ("PageHaut.php");
 ?>
 
-<link rel="stylesheet" href="Thriller.css" />
+<link rel="stylesheet" href="SCIFI.css" />
 
-<img id="gangster" src="gansta.gif"/> <br>
+<img id="" src=""/> <br>
 <a id="new" href="NewText.php">Transmettre un Essai</a><br>
 
 <?php
@@ -22,7 +22,7 @@ catch(Exception $e)
 // Si tout va bien, on peut continuer
 
 // On récupère tout le contenu de la table jeux_video
-$reponse = $bdd->query('SELECT * FROM Thriller INNER JOIN Utilisateur ON Utilisateur_idUtilisateur=idUtilisateur ORDER BY Date_Thriller DESC');
+$reponse = $bdd->query('SELECT * FROM Science-Fiction INNER JOIN Utilisateur ON Utilisateur_idUtilisateur=idUtilisateur ORDER BY Date_SciFi DESC');
 
 
 // On affiche chaque entrée une à une
@@ -37,8 +37,8 @@ while ($donnees = $reponse->fetch())
 			<table cellspacing="0" cellpadding="0" border="1" width="674">
 				<tr>
 					<td align=center><?php echo $donnees['Pseudo']; ?></td>
-					<td align=center><?php echo $donnees['Nom_Thriller']; ?></td>
-					<td align=center><?php echo $donnees['Date_Thriller']; ?></td>
+					<td align=center><?php echo $donnees['Nom_SciFi']; ?></td>
+					<td align=center><?php echo $donnees['Date_SciFi']; ?></td>
 					<td align=center><a id="Comm" href="Commentaires.php">Commenter</a><br></td>
 				</tr>
 			</table>
@@ -50,7 +50,7 @@ while ($donnees = $reponse->fetch())
 			<div style="width:700px; height:200px; overflow:auto;">
 			<table cellspacing="0" cellpadding="1" border="1" width="674">
 				<tr>
-					<td colspan=3 align=center style="overflow:auto"><?php echo $donnees['Texte_Thriller']; ?></td>
+					<td colspan=3 align=center style="overflow:auto"><?php echo $donnees['Texte_SciFi']; ?></td>
 				<tr>
 			</table>
 			</div>

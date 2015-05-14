@@ -39,6 +39,7 @@ while ($donnees = $reponse->fetch())
 					<td align=center><?php echo $donnees['Pseudo']; ?></td>
 					<td align=center><?php echo $donnees['Nom_Roman']; ?></td>
 					<td align=center><?php echo $donnees['Date_Roman']; ?></td>
+					<td align=center><a id="Comm" href="Commentaires.php">Commenter</a><br></td>
 				</tr>
 			</table>
 		</td>
