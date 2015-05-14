@@ -1,0 +1,67 @@
+<!DOCTYPE html">
+
+<html lang="fr">
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			$("dd").hide();
+			$("dt").css("cursor", "pointer");
+			$("dt").click(function() {
+				if($(this).next().is(":visible") == false) {
+					$("dd").slideUp();
+					$(this).next().slideDown();
+				}
+				else if($(this).next().is(":visible") == true){
+				$(this).next().slideUp();
+				}
+			});
+		});
+</script>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="FAQ.css"/>
+		<title>New Books</title>
+	</head>
+	
+	<body>
+        <div id="conteneur">
+		
+			<div id="navbar">
+				<ul>
+					<li><a href="Accueil.html">Accueil</a></li>
+					<li><a href="Thriller.html">Thriller</a></li>
+					<li><a href="Fantastique.html">Fantastique</a></li>
+					<li><a href="SCIFI.html">Science Fiction</a></li>
+					<li><a href="Horreur.html">Horreur</a></li>
+					<li><a href="Romantique.html">Romantique</a></li>
+				</ul>
+			</div>
+			
+			<h1 id="titre">
+				<strong>New Books</strong>
+			</h1>
+			
+		</div>
+		
+		<div id="FAQ">
+			<dl>
+				<dt id="TitrePartie">Comment pouvons nous nous procurer les oeuvres présentées sur ce site ?</dt>
+				<dd id="Parties">Toutes les oeuvres présentées sur ce site sont des oeuvres éditées, elles sont donc disponibles en librairie.</dd>
+				<dt id="TitrePartie">Pouvons nous utiliser les informations présentées sur le site ?</dt>
+				<dd id="Parties">Pour toutes informations s'agissant de ce site, veuillez vous référer aux conditions générales.</dd>
+				<dt id="TitrePartie">Pouvons nous vous contacter ?</dt>
+				<dd id="Parties">Nos coordonnées sont présentes dans la page <a href="Contact.html">"nous contacter"</a>, nous sommes à votre entière disposition.
+				 Mais tout abus de ce priviliège provoquera une mise sur liste noire de vos coordonnées.</dd>
+			</dl>
+		</div>
+		
+		<div id="endmenu">
+			<ul>
+				<li><a href="ConditionsG.html">Conditions Générales</a></li>
+				<li><a href="FAQ.html">FAQ</a></li>
+				<li><a href="Contact.html">Nous contacter</a></li>
+			</ul>
+		</div>
+		
+    </body>
+</html>

@@ -8,8 +8,6 @@
 			<table>
 				<tr><td>Pseudo:
 				<input id="name" type="text" name="pseudo"/></td></tr>
-				<tr><td>Mot de Passe:
-				<input id="mdp" type="password" name="mdp"/></td></tr>
 				<tr><td colspan="2">Commentaires:<br>
 				<textarea COLS="100" ROWS="10" name="Commentaires"></textarea>
 				</td></tr>

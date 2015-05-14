@@ -1,0 +1,82 @@
+body
+{
+	background: url('walkpaper_black.jpg');
+	background-size:cover;
+}
+
+a
+{
+	text-decoration: none;
+	color: #FCFDFD
+}
+
+a:hover
+{
+	color: #00BCE2;
+}
+
+#conteneur
+{
+	width:100%;
+}
+
+#titre 
+{
+	font-family: Vivaldi;
+	text-align: center;
+	font-size: 40px;
+	color: #FCFDFD;
+}
+
+#navbar
+{
+	width:100%;
+	font-size:13pt;
+	float:center;
+	text-align:center;
+}
+
+#endmenu
+{
+	width:99%;
+	font-size:13pt;
+	float:center;
+	text-align:center;
+	position:fixed;
+	bottom:10px;
+}
+
+ul
+{
+	list-style-type: none;
+	margin: 0 auto;
+}
+
+li 
+{
+	display: inline;
+	border: 2px solid #FCFDFD;
+	font-family: Futura, Tahoma, sans-serif;
+	color: #6A6C71;
+	padding: 5px;
+	border-radius: 5px 5px;
+	background-color: #6A6C71;
+}
+
+#TitrePartie
+{
+	color:#6A6C71;
+	font-size:20pt;
+}
+
+#Parties
+{
+	display: inline;
+	border: 0px solid #FCFDFD;
+	font-family: Futura, Tahoma, sans-serif;
+	color: #FCFDFD;
+	padding:0;
+	border-radius:0;
+	background-color:none;
+	font-size:14pt;
+}

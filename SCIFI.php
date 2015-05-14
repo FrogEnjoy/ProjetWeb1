@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="SCIFI.css" />
 
-<img id="" src=""/> <br>
+<img id="StarTrek" src="uss_enterprise.gif"/> <br>
 <a id="new" href="NewText.php">Transmettre un Essai</a><br>
 
 <?php
@@ -22,7 +22,7 @@ catch(Exception $e)
 // Si tout va bien, on peut continuer
 
 // On récupère tout le contenu de la table jeux_video
-$reponse = $bdd->query('SELECT * FROM Science-Fiction INNER JOIN Utilisateur ON Utilisateur_idUtilisateur=idUtilisateur ORDER BY Date_SciFi DESC');
+$reponse = $bdd->query('SELECT * FROM Science-Fiction INNER JOIN Utilisateur ON Utilisateur_idUtilisateur=idUtilisateur ORDER BY Date_SciFI DESC');
 
 
 // On affiche chaque entrée une à une
@@ -38,7 +38,7 @@ while ($donnees = $reponse->fetch())
 				<tr>
 					<td align=center><?php echo $donnees['Pseudo']; ?></td>
 					<td align=center><?php echo $donnees['Nom_SciFi']; ?></td>
-					<td align=center><?php echo $donnees['Date_SciFi']; ?></td>
+					<td align=center><?php echo $donnees['Date_SciFI']; ?></td>
 					<td align=center><a id="Comm" href="Commentaires.php">Commenter</a><br></td>
 				</tr>
 			</table>
