@@ -9,9 +9,11 @@ body
 	color: #FCFDFD;
 	border: 2px solid black;
 	background-color: #343434;
-	border-radius: 7px 7px;
+	border-radius: 7px;
 	padding: 3px;
 	font-family: Times New Roman;
+	left: 400px;
+	top: 200px;
 }
 
 #StarTrek

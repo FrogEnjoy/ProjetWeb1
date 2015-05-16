@@ -37,30 +37,39 @@
 
 
 
-
 <?php
+if(!empty($_POST["valider"])){
 
-//ne fonctionne pas pour le moment
-
-//fonctionne seulement quand le boutton est activé
-if(isset($_POST["valider"]))
-	
-		$bdd = new PDO("mysql:host=localhost;dbname=zoe;charset=utf8", "root", "");
-	
-	
-
-
-	htmlentities($essai=$_POST["essai"]);
+    
+        $bdd = new PDO("mysql:host=localhost;dbname=mydb;charset=utf8", "root", "");
+    
+    
+        $essai=htmlentities($_POST["essai"]);
        
 
-		if ($_POST["selecttheme"] == "Fantastique"){
-			$reponse = $bdd->query("INSERT INTO 'zoe'.'fantastique'('Texte_Fanta') VALUES($essai)");
+        
+         if ($_POST["selecttheme"] == "Fantastique"){
+            $reponse = $bdd->query("INSERT INTO `mydb`.`fantastique` (`Texte_Fanta`) VALUES (".$essai.")");
 
-		}else if ($_POST["selecttheme"] == "Thriller"){
-			$reponse = $bdd->query("INSERT INTO 'zoe'.'thriller'('Texte_Thriller') VALUES($essai)");
-		}
-	
+        }else if ($_POST["selecttheme"] == "Thriller"){
+            $reponse = $bdd->query("INSERT INTO `mydb`.`thriller` (`Texte_Thriller`) VALUES (".$essai.")");
+
+        }else if ($_POST["selecttheme"] == "Science-Fiction"){
+            $reponse = $bdd->query("INSERT INTO `mydb`.`sciencefiction` (`Texte_SciFI`) VALUES (".$essai.")");
+
+        }else if ($_POST["selecttheme"] == "Horreur"){
+            $reponse = $bdd->query("INSERT INTO `mydb`.`horreur` (`Texte_Horreur`) VALUES (".$essai.")");
+        
+        }else if ($_POST["selecttheme"] == "Romantique"){
+            $reponse = $bdd->query("INSERT INTO `mydb`.`romantique` (`Texte_Roman`,`Utilisateur_idUtilisateur`) VALUES (".$essai.",1)");
+        
+        }
+        
+}
+
 ?>
+
+
 
 
 
