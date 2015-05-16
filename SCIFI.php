@@ -22,7 +22,7 @@ catch(Exception $e)
 // Si tout va bien, on peut continuer
 
 // On récupère tout le contenu de la table jeux_video
-$reponse = $bdd->query('SELECT * FROM Science-Fiction INNER JOIN Utilisateur ON Utilisateur_idUtilisateur=idUtilisateur ORDER BY Date_SciFI DESC');
+$reponse = $bdd->query('SELECT * FROM sciencefiction INNER JOIN utilisateur ON utilisateur_idUtilisateur=idUtilisateur ORDER BY Date_SciFI DESC');
 
 
 // On affiche chaque entrée une à une
