@@ -68,10 +68,8 @@ include ("PageHaut.php");
           }
       }
     }
-    
+
 ?>
-		
-		</div> 
 
 		
 		

@@ -1,32 +1,9 @@
-<!DOCTYPE html">
 
-<html lang="fr">
-	<head>		<!-- La tête du site, soit l'onglet -->
-		<meta charset="UTF-8"/>
+<?php
+	include ("PageHaut.php");
+?>
+
 		<link rel="stylesheet" href="ConditionsG.css"/>
-		<title>New Books</title>
-	</head>
-	
-	<body>		<!-- Le corps du site, soit tout son contenu -->
-        <div id="conteneur">
-		
-			<div id="navbar">		<!-- Menu -->
-				<ul>
-					<!-- liste des liens vers les différentes parties du site -->
-					<li><a href="Accueil.html">Accueil</a></li>
-					<li><a href="Thriller.html">Thriller</a></li>
-					<li><a href="Fantastique.html">Fantastique</a></li>
-					<li><a href="SCIFI.html">Science Fiction</a></li>
-					<li><a href="Horreur.html">Horreur</a></li>
-					<li><a href="Romantique.html">Romantique</a></li>
-				</ul>
-			</div>
-			
-			<h1 id="titre">		<!-- Le Titre de la page -->
-				<strong>New Books</strong>
-			</h1>
-			
-		</div>
 		
 		<div id="conditionsgénérales">
 			<!-- Titre d'une partie du contenu -->
@@ -77,15 +54,6 @@
 				disponible sur le site "New Books".</p>
 				</br></br></br></br>
 		</div>
-		
-		<div id="endmenu"> <!-- Barre à la fin du site -->
-			<ul>
-				<!-- liste des liens vers les différentes parties du site -->
-				<li><a href="ConditionsG.html">Conditions Générales</a></li>
-				<li><a href="FAQ.html">FAQ</a></li>
-				<li><a href="Contact.html">Nous contacter</a></li>
-			</ul>
-		</div>
-		
-    </body>
-</html>
+<?php
+	include ("PageBas.php");
+?>
