@@ -6,7 +6,7 @@ include ("PageHaut.php");
 
 		<div>
 			<tbody >
-				<form method="post" >
+				<!--<form method="post" >
 				<fieldset>
 					<legend>Connexion</legend>
 						<table>
@@ -16,62 +16,53 @@ include ("PageHaut.php");
 				</fieldset>
 			</form>
 			
-				<input type=submit value=Connexion> <input type=submit value="Mdp Perdu ?">
+				<input type=submit value=Connexion> <input type=submit value="Mdp Perdu ?">-->
 				
-			<form>	
+			<form action="" method="POST">	
 				<fieldset>
 					<legend>Inscription</legend>
 						<table>
-						<label>Pseudo     :     </label> <input type="text" name="pseudo"/><br/>
-						<label>Mot de Passe :   </label> <input type="password" name="mdp"/><br/>
-						<label>Adresse Mail:    </label> <input type="text" name="email"/><br/>
+						<p>   Pseudo     :      <input type="text" name="Pseudo"/><br/>
+						      Mot de Passe :    <input type="password" name="Mdp"/><br/>
+						      Adresse Mail:     <input type="text" name="email"/><br/>
+            </p>
 						</table>
 				</fieldset>
 				<br> <input type="submit" name="valider"value="Inscription"/>
-			</form>
-			</tbody>
+			
 			
 <?php
-  
-  if(isset($_POST['valider']))
-    {
-         // D'abord, je me connecte à la base de données.
-     $bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', '');
+  if(isset($_POST["Pseudo"])&& 
+    isset($_POST["Mdp"])&& 
+    isset($_POST["email"])
+    )
+  {
+
+    // D'abord, je me connecte à la base de données.
+   try{     
+    $bdd = new PDO("mysql:host=localhost;dbname=mydb;charset=utf8", "root", "");
+    $sql = "INSERT INTO `mydb`.`utilisateur` (`Pseudo`,`Mdp`, `email`) VALUES (:Pseudo, :Mdp, :email)";
+    $request = $bdd->prepare($sql);
+
     
-      
-      // Je recupere les infos, plus securité pour le code.
-		htmlentities($pseudo = $_POST['pseudo']);
-        htmlentities($mdp = $_POST['mdp']);
-        htmlentities($email = $_POST['email']);
-      
-       // empecher les codes php dans la base
-      // Je verifie que TOUT les champs sont remplis.
-      if(empty($pseudo)||empty($mdp)||empty($email) )
-      {
-        echo'Vous devez remplir toutes les coordonnées';
-      }
-      else
-      {
-          $result = $bdd->query("SELECT email FROM utilisateur WHERE email = $email");
-          $result2 = $result -> fetch();
-          if (empty($result2['email'])){
-              if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    $reponse = $bdd->query("INSERT INTO utilisateur VALUES('', '$pseudo','$email', '$mdp')");
-                      //affiche un mot gentil, dans le futur on doit changer pour que ceci apparaisse sur une autre.
-                      echo "Bonjour $pseudo votre compte est bien enregistré";
-                } else {
-                  echo 'Votre email n\'est pas valide';
-              }
-          }
-          else{
-           echo 'votre email est déjà utilisé.';
-          }
-      }
+    $request->execute(array(
+    "Pseudo" => $_POST["Pseudo"],
+    "Mdp" => $_POST["Mdp"],
+    "email" => $_POST["email"]
+    ));
     }
+    catch(PDOException $e) {echo $e->getMessage();}
+
+
+      //print_r($_POST);
+      //affiche un mot gentil, dans le futur on doit changer pour que ceci apparaisse sur une autre.
+      echo "Bonjour " .$_POST["Pseudo"]. " votre compte est bien enregistré !";
+  } 
+  
 
 ?>
-
-		
+		</form>
+      </tbody>
 		
 <?php 
 include ("PageBas.php");
