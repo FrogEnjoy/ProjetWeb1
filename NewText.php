@@ -9,9 +9,9 @@
 			<form method="post">
 				<table>
 					<tr><td>Pseudo:
-					<input id="name" type="text" name="pseudo"/></td></tr>
-					<tr><td>Mot de Passe:
-					<input id="mdp" type="password" name="mdp"/></td></tr>
+					<input id="name" type="text" name="Pseudo"/></td></tr>
+					<!--<tr><td>Mot de Passe:
+					<input id="mdp" type="password" name="mdp"/></td></tr>-->
 					<tr><td colspan="2">Essai:<br>
 					<textarea COLS="100" ROWS="10" name="essai"></textarea>
 					</td></tr>
@@ -38,34 +38,52 @@
 
 
 <?php
-if(!empty($_POST["valider"])){
+	if(isset($_POST["Pseudo"])&& 
+    isset($_POST["essai"])&& 
+    isset($_POST["selecttheme"])
+    )
+  {
 
+
+// D'abord, je me connecte à la base de données.
+   try{     
+    $bdd = new PDO("mysql:host=localhost;dbname=mydb;charset=utf8", "root", "");
     
-        $bdd = new PDO("mysql:host=localhost;dbname=mydb;charset=utf8", "root", "");
-    
-    
-        $essai=htmlentities($_POST["essai"]);
-       
+    //donne ma requete SQL
+    if ($_POST["selecttheme"] == "Fantastique"){
+            $sql = "INSERT INTO `mydb`.`fantastique` (`Texte_Fanta`) VALUES (".$essai.")";
 
-        
-         if ($_POST["selecttheme"] == "Fantastique"){
-            $reponse = $bdd->query("INSERT INTO `mydb`.`fantastique` (`Texte_Fanta`) VALUES (".$essai.")");
+    }else if ($_POST["selecttheme"] == "Thriller"){
+            $sql = "INSERT INTO `mydb`.`thriller` (`Texte_Thriller`) VALUES (".$essai.")";
 
-        }else if ($_POST["selecttheme"] == "Thriller"){
-            $reponse = $bdd->query("INSERT INTO `mydb`.`thriller` (`Texte_Thriller`) VALUES (".$essai.")");
+    }else if ($_POST["selecttheme"] == "Science-Fiction"){
+            $sql = "INSERT INTO `mydb`.`sciencefiction` (`Texte_SciFI`) VALUES (".$essai.")";
 
-        }else if ($_POST["selecttheme"] == "Science-Fiction"){
-            $reponse = $bdd->query("INSERT INTO `mydb`.`sciencefiction` (`Texte_SciFI`) VALUES (".$essai.")");
+    }else if ($_POST["selecttheme"] == "Horreur"){
+            $sql = "INSERT INTO `mydb`.`horreur` (`Texte_Horreur`) VALUES (".$essai.")";
+        
+    }else if ($_POST["selecttheme"] == "Romantique"){
+            $sql = "INSERT INTO `mydb`.`romantique` (`Texte_Roman`) VALUES (".$essai.")";
+        
+    }
 
-        }else if ($_POST["selecttheme"] == "Horreur"){
-            $reponse = $bdd->query("INSERT INTO `mydb`.`horreur` (`Texte_Horreur`) VALUES (".$essai.")");
-        
-        }else if ($_POST["selecttheme"] == "Romantique"){
-            $reponse = $bdd->query("INSERT INTO `mydb`.`romantique` (`Texte_Roman`,`Utilisateur_idUtilisateur`) VALUES (".$essai.",1)");
-        
-        }
-        
-}
+    //prépare la requete
+    $request = $bdd->prepare($sql);
+
+    //o met dans un tableau les variables
+    $request->execute(array(
+    "Pseudo" => $_POST["Pseudo"],
+    "essai" => $_POST["essai"],
+    "selecttheme" => $_POST["selecttheme"]
+    ));
+    }
+    catch(PDOException $e) {echo $e->getMessage();}
+
+
+      
+      //affiche un mot gentil, dans le futur on doit changer pour que ceci apparaisse sur une autre.
+      echo "Votre histoire " .$_POST["selecttheme"]. " est bien enregistré !";
+  } 
 
 ?>
 
