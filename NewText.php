@@ -11,7 +11,7 @@
                     <tr><td>Pseudo:
                     <input id="name" type="text" name="Pseudo"/></td></tr>
                     <tr><td>Titre de l'essai:
-                    <input id="titre" type="text" name="nom"/></td></tr>
+                    <input id="title" type="text" name="nom"/></td></tr>
                     <tr><td colspan="2">Essai:<br>
                     <textarea COLS="100" ROWS="10" name="essai"></textarea>
                     </td></tr>
@@ -34,29 +34,6 @@
                 <input type="submit" value="Annuler" name="retour">
             </form>
         </div>
-
-
-
-
-<?php
-if(!empty($_POST["valider"])){
-
-   
-        $bdd = new PDO("mysql:host=localhost;dbname=mydb;charset=utf8", "root", "");
-   
-   
-    htmlentities($essai=$_POST["essai"]);
-      
-
-        if ($_POST["selecttheme"] == "Fantastique"){
-            $reponse = $bdd->query("INSERT INTO Entries 'mydb'.'fantastique'('Texte_Fanta') VALUES($essai)");
-
-        }else if ($_POST["selecttheme"] == "Thriller"){
-            $reponse = $bdd->query("INSERT INTO 'mydb'.'thriller'('Texte_Thriller') VALUES($essai)");
-        }
-}
-   
-?>
 
 
 
