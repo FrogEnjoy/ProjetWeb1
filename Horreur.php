@@ -67,8 +67,6 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 
 ?>
 
-<!--http://stackoverflow.com/questions/14834198/table-scroll-with-html-and-css-->
-
 <?php 
 	include ("PageBas.php");
 ?>
