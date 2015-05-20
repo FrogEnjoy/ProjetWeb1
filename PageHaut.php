@@ -18,7 +18,7 @@
 					<li id="li1"><a href="SCIFI.php">Science-Fiction</a></li>
 					<li id="li1"><a href="Horreur.php">Horreur</a></li>
 					<li id="li1"><a href="Romantique.php">Romantique</a></li>
-					<li id="li1"><a href="Connexion.php">Connexion</a></li>
+					<li id="li1"><a href="Connexion.php">Inscription</a></li>
 				</ul>
 			</div>
 			
