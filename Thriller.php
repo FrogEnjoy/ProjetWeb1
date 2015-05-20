@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="Thriller.css" />
 
 <img id="psychose" src="psychose.gif"/> <br>
-<a id="new" href="NewText.php">Transmettre un Essai</a><br>
+<a id="new" href="NewTextThriller.php">Transmettre un Essai</a><br>
 
 <?php
 try

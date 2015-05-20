@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="Fantastique.css" />
 
 <img id="dragon" src="dragon_fini.gif"/> <br>
-<a id="new" href="NewText.php">Transmettre un Essai</a><br>
+<a id="new" href="NewTextFanta.php">Transmettre un Essai</a><br>
 
 <?php
 try

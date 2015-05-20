@@ -11,7 +11,7 @@
                     <tr><td>Pseudo:
                     <input id="name" type="text" name="Pseudo"/></td></tr>
                     <tr><td>Titre de l'essai:
-                    <input id="title" type="text" name="Nom_Fanta"/></td></tr>
+                    <input id="title" type="text" name="Nom_SciFI"/></td></tr>
                     <tr><td colspan="2">Essai:<br>
                     <textarea COLS="100" ROWS="10" name="essai"></textarea>
                     </td></tr>
@@ -44,7 +44,7 @@
 <?php
 if(isset($_POST["Pseudo"])&&
    isset($_POST["essai"])&&
-   isset($_POST["Nom_Fanta"])
+   isset($_POST["Nom_SciFI"])
    )
 
   {
@@ -53,12 +53,12 @@ if(isset($_POST["Pseudo"])&&
    
    
     $essai=htmlentities($_POST["essai"]);
-    $Nom_Fanta=htmlentities($_POST["Nom_Fanta"]);
+    $Nom_SciFI=htmlentities($_POST["Nom_SciFI"]);
           
 
-    $reponse = $bdd->query("INSERT INTO `mydb`.`fantastique` (`Texte_Fanta`,`Nom_Fanta`) VALUES ('$essai','$Nom_Fanta')");
+    $reponse = $bdd->query("INSERT INTO `mydb`.`ScienceFiction` (`idSciFI`, `Nom_SciFI`, `Date_SciFI`, `Texte_SciFI`, `Utilisateur_idUtilisateur`, `Com_SciFI`) VALUES (NULL, '$Nom_SciFI', NULL, '$essai', '', NULL)");
     //affiche un mot gentil, dans le futur on doit changer pour que ceci apparaisse sur une autre.
-      echo "Votre histoire " .$_POST["Nom_Fanta"]. " est bien enregistré !";
+      echo "Votre histoire " .$_POST["Nom_SciFI"]. " est bien enregistré !";
 
 }
    

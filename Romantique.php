@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="Romantique.css" />
 
 <img id="bisous" src="bisous.gif"/> <br>
-<a id="new" href="NewText.php">Transmettre un Essai</a><br>
+<a id="new" href="NewTextRoman.php">Transmettre un Essai</a><br>
 
 <?php
 try

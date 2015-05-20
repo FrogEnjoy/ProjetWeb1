@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="Horreur.css" />
 
 <img id="squelette" src="horreur1.gif"/> <br>
-<a id="new" href="NewText.php">Transmettre un Essai</a><br>
+<a id="new" href="NewTextHorreur.php">Transmettre un Essai</a><br>
 
 <?php
 try

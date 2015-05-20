@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="SCIFI.css" />
 
 <img id="StarTrek" src="uss_enterprise.gif"/> <br>
-<a id="new" href="NewText.php">Transmettre un Essai</a><br>
+<a id="new" href="NewTextSciFi.php">Transmettre un Essai</a><br>
 
 <?php
 try
